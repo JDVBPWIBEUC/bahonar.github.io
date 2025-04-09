@@ -27,16 +27,23 @@
       color: #0f162d;
     }
 
+    body.mobile-bg {
+      background: url('Contact%20Us%20Mobile%20Background.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+
     .contact-container {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       gap: 40px;
-      padding-right: 100px;
     }
 
     .info-wrapper {
       position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .info-button {
@@ -49,7 +56,7 @@
       border-radius: 25px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      width: 300px; /* اضافه کردن عرض یکسان برای همه دکمه‌ها */
+      width: 300px;
     }
 
     .info-box {
@@ -86,7 +93,6 @@
       opacity: 1;
     }
 
-    /* 👇 کادر جدید برای لینک نقشه */
     .map-link-box {
       position: absolute;
       background-color: #c6a67a;
@@ -114,23 +120,47 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    @media (max-width: 768px) {
+      .info-button {
+        font-size: 24px;
+        padding: 25px 60px;
+        width: 250px;
+      }
+
+      .info-box, .map-link-box {
+        font-size: 18px;
+        padding: 15px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .info-button {
+        font-size: 20px;
+        padding: 20px 40px;
+        width: 220px;
+      }
+
+      .info-box, .map-link-box {
+        font-size: 16px;
+        padding: 12px 18px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="contact-container">
-    <!-- دکمه نشانی -->
     <div class="info-wrapper address">
       <button class="info-button">نشانی</button>
       <div class="info-box">
-        همدان، کوی دکتر چمران، بلوار محمدیه، خ سلحشورو
+        همدان، کوی دکتر چمران، بلوار محمدیه، خ سلحشور
       </div>
-      <!-- کادر لینک نقشه -->
       <div class="map-link-box">
         <a href="https://balad.ir/p/5L1G3wYdAAYWIx?preview=true" target="_blank">!برو به نقشه</a>
       </div>
     </div>
 
-    <!-- دکمه تلفن -->
     <div class="info-wrapper tel">
       <button class="info-button">تلفن</button>
       <div class="info-box">
@@ -138,5 +168,13 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // بکگراند موبایل اگه عرض کمتر از 768 باشه
+    if (window.innerWidth <= 768) {
+      document.body.classList.add('mobile-bg');
+    }
+  </script>
+
 </body>
 </html>
