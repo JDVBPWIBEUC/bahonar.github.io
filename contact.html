@@ -139,10 +139,18 @@
         padding: 12px 20px;
       }
 
-     @media (max-width: 768px) {
-  /* تغییر موقعیت کادر "برو به نقشه" در موبایل */
+
+    @media (max-width: 768px) {
   .map-link-box {
-    bottom: 20px;  /* کادر پایین‌تر از موقعیت فعلی قرار می‌گیرد */
+    bottom: 130px; /* موقعیت اولیه قبل از حرکت */
+  }
+
+  .address:hover .map-link-box {
+    opacity: 1;
+    bottom: 215px; /* موقعیت نهایی بعد از حرکت */
+  }
+}
+
   }
 }
 
