@@ -13,8 +13,6 @@
     }
 
     body {
-      background: url('gallery-background-stars.webp') no-repeat center center fixed;
-      background-size: cover;
       margin: 0;
       padding: 0;
       font-family: 'DAMOON-Bold', sans-serif;
@@ -23,6 +21,13 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background: url('gallery-background-stars.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body.mobile-background {
+      background: url('gallery-background-stars%20Mobile.webp') no-repeat center center fixed;
+      background-size: cover;
     }
 
     .title {
@@ -66,13 +71,7 @@
       }
     }
 
-    /* استایل برای موبایل */
     @media (max-width: 768px) {
-      body {
-        background: url('gallery-background-stars-mobile.webp') no-repeat center center fixed;
-        background-size: cover;
-      }
-
       .title {
         font-size: 28px;
         margin-top: 30px;
@@ -106,6 +105,13 @@
     <a href="memari-gallery.html" class="category-button">معماری</a>
     <a href="sakhteman-gallery.html" class="category-button">ساختمان</a>
   </div>
+
+  <script>
+    // اگه عرض صفحه کوچکتر یا مساوی 768 بود، بک‌گراند موبایل لود شه
+    if (window.innerWidth <= 768) {
+      document.body.classList.add("mobile-background");
+    }
+  </script>
 
 </body>
 </html>
