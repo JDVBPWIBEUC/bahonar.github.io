@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گالری آثار معماری</title>
+    <style>
+        @font-face {
+            font-family: 'DAMOON-Bold';
+            src: url('DAMOON-Bold.woff') format('woff');
+        }
+        body {
+            background-color: #001f3f;
+            color: white;
+            font-family: 'DAMOON-Bold', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #3a6d8c;
+            padding: 20px;
+            font-size: 24px;
+            font-family: 'DAMOON-Bold', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ead8b1;
+            color: #001f3f;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'DAMOON-Bold', sans-serif;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background: #c6a67a;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>گالری آثار معماری</h1>
+</header>
+
+<div class="gallery-container">
+    <div class="gallery">
+        <img src="architecture1.jpg" alt="اثر 1">
+        <img src="architecture2.jpg" alt="اثر 2">
+        <img src="architecture3.jpg" alt="اثر 3">
+    </div>
+</div>
+
+<a href="javascript:history.back()" class="back-button">بازگشت به صفحه قبل</a>
+
+</body>
+</html>

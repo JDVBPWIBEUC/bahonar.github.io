@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گالری فتوگرافیک</title>
+  <style>
+    @font-face {
+      font-family: 'DAMOON-Light';
+      src: url('DAMOON-Light.woff') format('woff');
+    }
+    @font-face {
+      font-family: 'DAMOON-Bold';
+      src: url('DAMOON-Bold.woff') format('woff');
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      background-color: #0f152d;
+      color: #e8bf8b;
+      font-family: 'DAMOON-Light', sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+      background: linear-gradient(to bottom, rgba(15, 21, 45, 0.95), rgba(15, 21, 45, 0));
+    }
+
+    header h1 {
+      font-family: 'DAMOON-Bold', sans-serif;
+      font-size: 60px;
+      margin: 0;
+      color: #e8bf8b;
+      text-shadow: 2px 2px 10px rgba(255, 215, 150, 0.3);
+      animation: slideDown 1.2s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .gallery-container {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .back-button {
+      margin: 50px auto 30px;
+      display: inline-block;
+      background-color: transparent;
+      color: #e8bf8b;
+      border: 2px solid #e8bf8b;
+      padding: 12px 26px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #e8bf8b;
+      color: #0f152d;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .modal:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>گالری آثار فتوگرافیک</h1>
+  </header>
+
+  <div class="gallery-container">
+    <img src="building1.jpg" onclick="openModal(this.src)">
+    <img src="building2.jpg" onclick="openModal(this.src)">
+    <img src="building4.jpg" onclick="openModal(this.src)">
+    <img src="building5.jpg" onclick="openModal(this.src)">
+    <img src="building6.jpg" onclick="openModal(this.src)">
+    <img src="building7.jpg" onclick="openModal(this.src)">
+    <img src="building8.jpg" onclick="openModal(this.src)">
+    <img src="building9.jpg" onclick="openModal(this.src)">
+    <img src="building10.jpg" onclick="openModal(this.src)">
+    <img src="building11.jpg" onclick="openModal(this.src)">
+    <img src="building12.jpg" onclick="openModal(this.src)">
+    <img src="building13.jpg" onclick="openModal(this.src)">
+    <img src="building14.jpg" onclick="openModal(this.src)">
+    <img src="building15.jpg" onclick="openModal(this.src)">
+    <img src="building16.jpg" onclick="openModal(this.src)">
+    <img src="building17.jpg" onclick="openModal(this.src)">
+  </div>
+
+  <a href="javascript:history.back()" class="back-button">بازگشت به صفحه قبل</a>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImage" src="">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
