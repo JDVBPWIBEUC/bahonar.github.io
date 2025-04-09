@@ -112,15 +112,10 @@
       display: block;
     }
 
-    /* مدیا کوئری برای صفحه‌های کوچک */
+    /* فقط تغییر بکگراند در موبایل */
     @media (max-width: 768px) {
       body {
-        background: url('Mobile Background.webp') no-repeat center center fixed;
-        background-size: cover;
-      }
-
-      header {
-        background: url('Mobile Header.webp') no-repeat center center;
+        background: url('Mobile-Background.webp') no-repeat center center fixed;
         background-size: cover;
       }
 
@@ -147,7 +142,7 @@
       }
     }
 
-    /* مدیا کوئری برای موبایل‌های خیلی کوچک */
+    /* برای موبایل‌های کوچکتر از 480px */
     @media (max-width: 480px) {
       .header-title {
         font-size: 30px;
@@ -194,19 +189,7 @@
   </div>
 
   <div class="footer-image">
-    <img src="footer-banner.webp" alt="تصویر پایین سایت" id="footer-img">
+    <img src="footer-banner.webp" alt="تصویر پایین سایت">
   </div>
-
-  <script>
-    // تغییر تصویر فوتر در موبایل
-    window.addEventListener('load', function () {
-      if (window.innerWidth <= 768) {
-        const footerImg = document.getElementById('footer-img');
-        if (footerImg) {
-          footerImg.src = 'Mobile Footer.webp';
-        }
-      }
-    });
-  </script>
 </body>
 </html>
