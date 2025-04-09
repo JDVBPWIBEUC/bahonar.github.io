@@ -15,7 +15,7 @@
     }
 
     body {
-      background: url('Contact Us Mobile Background.webp') no-repeat center center fixed;
+      background: url('Contact Page Background.webp') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
@@ -25,32 +25,40 @@
       align-items: center;
       height: 100vh;
       color: #0f162d;
+      overflow-x: hidden;
+    }
+
+    body.mobile-bg {
+      background: url('Contact%20Us%20Mobile%20Background.webp') no-repeat center center fixed;
+      background-size: cover;
     }
 
     .contact-container {
       display: flex;
       flex-direction: column;
-      align-items: center; /* وسط‌چین دکمه‌ها */
+      align-items: center;
       gap: 40px;
-      padding: 20px;
+      padding: 10px;
     }
 
     .info-wrapper {
       position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .info-button {
       background-color: #c6a67a;
       color: #0f162d;
       font-family: 'DAMOON-Bold';
-      font-size: 32px;
+      font-size: 28px;
       padding: 25px 80px;
       border: none;
       border-radius: 25px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      width: 280px;
-      text-align: center;
+      width: 260px;
     }
 
     .info-box {
@@ -72,7 +80,6 @@
       left: 50%;
       transform: translate(-50%, -10px);
     }
-
     .tel:hover .info-box {
       transform: translate(-50%, 10px);
       opacity: 1;
@@ -83,7 +90,6 @@
       left: 50%;
       transform: translate(-50%, 10px);
     }
-
     .address:hover .info-box {
       transform: translate(-50%, -10px);
       opacity: 1;
@@ -108,7 +114,7 @@
 
     .address:hover .map-link-box {
       opacity: 1;
-      bottom: 215px;
+      bottom: 167px;
     }
 
     .map-link-box a {
@@ -117,35 +123,40 @@
       font-weight: bold;
     }
 
-    /* Responsive تنظیمات واکنش‌گرا */
     @media (max-width: 768px) {
-      .info-button {
-        font-size: 26px;
-        padding: 20px 50px;
-        width: 250px;
+      body {
+        background-size: cover;
       }
 
-      .address:hover .map-link-box {
-        bottom: 160px;
+      .info-button {
+        font-size: 22px;
+        padding: 20px 60px;
+        width: 220px;
+      }
+
+      .info-box, .map-link-box {
+        font-size: 16px;
+        padding: 12px 20px;
       }
     }
 
     @media (max-width: 480px) {
       .info-button {
-        font-size: 22px;
+        font-size: 20px;
         padding: 18px 40px;
-        width: 220px;
+        width: 180px;
       }
 
-      .address:hover .map-link-box {
-        bottom: 130px;
+      .info-box, .map-link-box {
+        font-size: 14px;
+        padding: 10px 18px;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="contact-container">
-    <!-- نشانی -->
     <div class="info-wrapper address">
       <button class="info-button">نشانی</button>
       <div class="info-box">
@@ -156,7 +167,6 @@
       </div>
     </div>
 
-    <!-- تلفن -->
     <div class="info-wrapper tel">
       <button class="info-button">تلفن</button>
       <div class="info-box">
@@ -164,5 +174,12 @@
       </div>
     </div>
   </div>
+
+  <script>
+    if (window.innerWidth <= 768) {
+      document.body.classList.add('mobile-bg');
+    }
+  </script>
+
 </body>
 </html>
