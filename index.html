@@ -11,6 +11,7 @@
       font-weight: normal;
       font-style: normal;
     }
+
     @font-face {
       font-family: 'DAMOON-Bold';
       src: url('DAMOON-Bold.woff') format('woff');
@@ -24,16 +25,16 @@
     }
 
     body {
-      background: url('background.webp') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      font-family: 'DAMOON-Light', sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      text-align: center;
+      font-family: 'DAMOON-Light', sans-serif;
+      color: white;
+      background: url('background.webp') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
@@ -46,7 +47,6 @@
 
     .header-title {
       font-family: 'DAMOON-Bold', sans-serif;
-      font-weight: bold;
       font-size: 55px;
     }
 
@@ -112,11 +112,11 @@
       display: block;
     }
 
-    /* فقط تغییر بکگراند در موبایل */
+    /* ===== 🌐 بک‌گراند مخصوص موبایل ===== */
     @media (max-width: 768px) {
       body {
-        background: url('Mobile Background.webp') no-repeat center center fixed;
-        background-size: cover;
+        background: url('Mobile-Background.webp') no-repeat center center fixed !important;
+        background-size: cover !important;
       }
 
       .header-title {
@@ -142,7 +142,7 @@
       }
     }
 
-    /* برای موبایل‌های کوچکتر از 480px */
+    /* 📱 برای موبایل‌های خیلی کوچک */
     @media (max-width: 480px) {
       .header-title {
         font-size: 30px;
@@ -189,7 +189,7 @@
   </div>
 
   <div class="footer-image">
-    <img src="footer-banner.webp" alt="تصویر پایین سایت">
+    <img src="footer-banner.webp" alt="تصویر پایین سایت" />
   </div>
 </body>
 </html>
