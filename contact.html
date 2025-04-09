@@ -129,43 +129,36 @@
       }
 
       .info-button {
-        font-size: 22px;
-        padding: 20px 60px;
-        width: 220px;
+        font-size: 18px; /* کوچک‌تر کردن اندازه فونت */
+        padding: 15px 50px; /* کم کردن فضای داخلی دکمه */
+        width: 180px; /* کم کردن عرض دکمه */
       }
 
       .info-box, .map-link-box {
-        font-size: 16px;
-        padding: 12px 20px;
+        font-size: 14px; /* کوچک‌تر کردن اندازه فونت داخل باکس‌ها */
+        padding: 10px 18px; /* کم کردن فضای داخلی باکس‌ها */
       }
 
+      .map-link-box {
+        bottom: 130px; /* موقعیت اولیه قبل از حرکت */
+      }
 
-    @media (max-width: 768px) {
-  .map-link-box {
-    bottom: 130px; /* موقعیت اولیه قبل از حرکت */
-  }
-
-  .address:hover .map-link-box {
-    opacity: 1;
-    bottom: 170px; /* موقعیت نهایی بعد از حرکت */
-  }
-}
-
-  }
-}
-
+      .address:hover .map-link-box {
+        opacity: 1;
+        bottom: 150px; /* موقعیت نهایی بعد از حرکت */
+      }
     }
 
     @media (max-width: 480px) {
       .info-button {
-        font-size: 20px;
-        padding: 18px 40px;
-        width: 180px;
+        font-size: 16px; /* اندازه فونت کوچک‌تر برای گوشی‌های خیلی کوچک */
+        padding: 12px 30px; /* کم کردن بیشتر فضای داخلی دکمه */
+        width: 150px; /* کم کردن عرض دکمه */
       }
 
       .info-box, .map-link-box {
-        font-size: 14px;
-        padding: 10px 18px;
+        font-size: 12px; /* کوچک‌تر کردن اندازه فونت داخل باکس‌ها */
+        padding: 8px 14px; /* کم کردن فضای داخلی باکس‌ها */
       }
     }
   </style>
