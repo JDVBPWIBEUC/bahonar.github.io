@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تماس با ما - هنرستان باهنر</title>
+  <style>
+    @font-face {
+      font-family: 'DAMOON-Light';
+      src: url('DAMOON-Light.woff') format('woff');
+    }
+    @font-face {
+      font-family: 'DAMOON-Bold';
+      src: url('DAMOON-Bold.woff') format('woff');
+    }
+
+    body {
+      background: url('Contact Page Background.webp') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'DAMOON-Light', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #0f162d;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 40px;
+      padding-right: 100px;
+    }
+
+    .info-wrapper {
+      position: relative;
+    }
+
+    .info-button {
+      background-color: #c6a67a;
+      color: #0f162d;
+      font-family: 'DAMOON-Bold';
+      font-size: 36px;
+      padding: 35px 100px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 300px; /* اضافه کردن عرض یکسان برای همه دکمه‌ها */
+    }
+
+    .info-box {
+      position: absolute;
+      background-color: #c6a67a;
+      color: #0f162d;
+      font-size: 20px;
+      padding: 20px 30px;
+      border-radius: 15px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .tel .info-box {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -10px);
+    }
+    .tel:hover .info-box {
+      transform: translate(-50%, 10px);
+      opacity: 1;
+    }
+
+    .address .info-box {
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, 10px);
+    }
+    .address:hover .info-box {
+      transform: translate(-50%, -10px);
+      opacity: 1;
+    }
+
+    /* 👇 کادر جدید برای لینک نقشه */
+    .map-link-box {
+      position: absolute;
+      background-color: #c6a67a;
+      color: #0f162d;
+      font-size: 20px;
+      padding: 20px 30px;
+      border-radius: 100px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      bottom: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .address:hover .map-link-box {
+      opacity: 1;
+      bottom: 215px;
+    }
+
+    .map-link-box a {
+      color: #0f162d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <!-- دکمه نشانی -->
+    <div class="info-wrapper address">
+      <button class="info-button">نشانی</button>
+      <div class="info-box">
+        همدان، کوی دکتر چمران، بلوار محمدیه، خ سلحشورو
+      </div>
+      <!-- کادر لینک نقشه -->
+      <div class="map-link-box">
+        <a href="https://balad.ir/p/5L1G3wYdAAYWIx?preview=true" target="_blank">!برو به نقشه</a>
+      </div>
+    </div>
+
+    <!-- دکمه تلفن -->
+    <div class="info-wrapper tel">
+      <button class="info-button">تلفن</button>
+      <div class="info-box">
+        00000000
+      </div>
+    </div>
+  </div>
+</body>
+</html>
